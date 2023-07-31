@@ -1,0 +1,24 @@
+{
+	"manifest_version": 3,
+	"name": "OpenSimpleCORS",
+	"version": "1.0.0",
+	"description": "Simple and open-source browser extension that allows localhost to make CORS requests anywhere. It includes uses Manifest V3, and has no code. To add more trusted domains, download the source from https://github.com/discapes/opensimplecors, create a new rule in rules.json and in chrome://extensions/ select Developer Mode -> Load unpacked.",
+	"author": "miika.km.tuominen@gmail.com",
+	"icons": {
+		"16": "icon16.png",
+		"32": "icon32.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"declarative_net_request": {
+		"rule_resources": [
+			{
+				"id": "ruleset_1",
+				"enabled": true,
+				"path": "rules.json"
+			}
+		]
+	},
+	"permissions": ["declarativeNetRequest"],
+	"host_permissions": ["*://*/*"]
+}

@@ -1,0 +1,56 @@
+[
+	{
+		"id": 1,
+		"priority": 1,
+		"action": { "type": "block" },
+		"condition": {
+			"urlFilter": "example.org/sanity_test",
+			"resourceTypes": ["main_frame"]
+		}
+	},
+	{
+		"id": 2,
+		"priority": 1,
+		"action": {
+			"type": "modifyHeaders",
+			"responseHeaders": [
+				{
+					"header": "Access-Control-Allow-Origin",
+					"operation": "set",
+					"value": "*"
+				},
+				{
+					"header": "Access-Control-Allow-Headers",
+					"operation": "set",
+					"value": "Content-Type,Authorization"
+				},
+				{
+					"header": "Access-Control-Allow-Methods",
+					"operation": "set",
+					"value": "*"
+				}
+			]
+		},
+		"condition": {
+			"initiatorDomains": ["localhost"],
+			"resourceTypes": [
+				"main_frame",
+				"sub_frame",
+				"stylesheet",
+				"script",
+				"image",
+				"font",
+				"object",
+				"xmlhttprequest",
+				"ping",
+				"csp_report",
+				"media",
+				"websocket",
+				"webtransport",
+				"webbundle",
+				"other"
+			],
+			"domainType": "thirdParty"
+		}
+	}
+]
