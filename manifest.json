@@ -20,5 +20,10 @@
 		]
 	},
 	"permissions": ["declarativeNetRequest"],
-	"host_permissions": ["*://*/*"]
+	"host_permissions": ["*://*/*"],
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "opensimplecors@miikat.dev"
+		}
+	}
 }
